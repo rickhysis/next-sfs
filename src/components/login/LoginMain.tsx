@@ -4,7 +4,7 @@ import * as React from 'react';
 import LoginForm from '@/components/login/LoginForm';
 import { LoginSchema, loginSchema } from '@/components/login/LoginSchema';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/pages/firebase';
+import { auth } from '@/firebase'
 import { signIn } from 'next-auth/react';
 
 export interface LoginMainProps { }

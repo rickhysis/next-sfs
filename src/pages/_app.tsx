@@ -8,8 +8,7 @@ import {
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Provider as JotaiProvider } from 'jotai';
 import { NextPageContext } from 'next';
-import type { AppContext, AppProps } from 'next/app';
-import App from 'next/app';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
@@ -78,19 +77,19 @@ function MyApp({
 	);
 }
 
-MyApp.getInitialProps = async (context: AppContext) => {
-	if (context?.ctx?.res) {
-		context.ctx.res?.setHeader(
-			'Cache-Control',
-			'public, s-maxage=10, stale-while-revalidate=59'
-		);
-	}
+// MyApp.getInitialProps = async (context: AppContext) => {
+// 	if (context?.ctx?.res) {
+// 		context.ctx.res?.setHeader(
+// 			'Cache-Control',
+// 			'public, s-maxage=10, stale-while-revalidate=59'
+// 		);
+// 	}
 
-	const appProps = await App.getInitialProps(context);
+// 	const appProps = await App.getInitialProps(context);
 
-	return {
-		...appProps,
-	};
-};
+// 	return {
+// 		...appProps,
+// 	};
+// };
 
 export default MyApp;

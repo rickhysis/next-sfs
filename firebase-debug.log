@@ -1,0 +1,58 @@
+[debug] [2023-09-11T10:57:39.507Z] ----------------------------------------------------------------------
+[debug] [2023-09-11T10:57:39.526Z] Command:       /Users/mac/.nvm/versions/node/v18.16.0/bin/node /Users/mac/.nvm/versions/node/v18.16.0/bin/firebase deploy
+[debug] [2023-09-11T10:57:39.527Z] CLI Version:   12.5.3
+[debug] [2023-09-11T10:57:39.527Z] Platform:      darwin
+[debug] [2023-09-11T10:57:39.527Z] Node Version:  v18.16.0
+[debug] [2023-09-11T10:57:39.752Z] Time:          Mon Sep 11 2023 17:57:39 GMT+0700 (Western Indonesia Time)
+[debug] [2023-09-11T10:57:39.753Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-09-11T10:57:40.168Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-09-11T10:57:40.169Z] > authorizing via signed-in user (rickhysiswanto@gmail.com)
+[debug] [2023-09-11T10:57:40.169Z] [iam] checking project sfs-db-e2130 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-09-11T10:57:40.180Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sfs-db-e2130:testIamPermissions [none]
+[debug] [2023-09-11T10:57:40.180Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sfs-db-e2130:testIamPermissions x-goog-quota-user=projects/sfs-db-e2130
+[debug] [2023-09-11T10:57:40.180Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sfs-db-e2130:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-11T10:57:41.986Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sfs-db-e2130:testIamPermissions 200
+[debug] [2023-09-11T10:57:41.986Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sfs-db-e2130:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-09-11T10:57:41.988Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sfs-db-e2130 [none]
+[debug] [2023-09-11T10:57:42.661Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sfs-db-e2130 200
+[debug] [2023-09-11T10:57:42.661Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sfs-db-e2130 {"projectId":"sfs-db-e2130","projectNumber":"609222608047","displayName":"sfs-db","name":"projects/sfs-db-e2130","resources":{"hostingSite":"sfs-db-e2130","realtimeDatabaseInstance":"sfs-db-e2130-default-rtdb","storageBucket":"sfs-db-e2130.appspot.com","locationId":"asia-east1"},"state":"ACTIVE","etag":"1_b7dc9afc-7b37-421f-86d1-747e89a8984e"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] - info Linting and checking validity of types...
+
+[info] - info Creating an optimized production build...
+
+[info] - info Compiled successfully
+
+[info] - info Collecting page data...
+
+[info] Warning: You have opted-out of Automatic Static Optimization due to `getInitialProps` in `pages/_app`. This does not opt-out pages with `getStaticProps`
+Read more: https://nextjs.org/docs/messages/opt-out-auto-static-optimization
+
+
+[info] 
+
+[info] > Build optimization failed: found pages without a React Component as default export in 
+pages/page
+pages/firebase
+
+See https://nextjs.org/docs/messages/page-without-valid-component for more info.
+
+
+[debug] [2023-09-11T10:59:19.834Z] Error: Unable to find the next dep, try NPM installing?
+    at getConfig (/Users/mac/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:386:19)
+    at build (/Users/mac/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:68:65)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async prepareFrameworks (/Users/mac/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/frameworks/index.js:216:33)
+    at async deploy (/Users/mac/.nvm/versions/node/v18.16.0/lib/node_modules/firebase-tools/lib/deploy/index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.

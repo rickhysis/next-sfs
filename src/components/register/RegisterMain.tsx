@@ -7,7 +7,7 @@ import {
 	RegisterSchemaType,
 } from '@/components/register/RegisterSchema';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '@/pages/firebase';
+import { auth } from '@/firebase';
 import { useRouter } from 'next/router';
 
 export interface RegisterMainProps { }
