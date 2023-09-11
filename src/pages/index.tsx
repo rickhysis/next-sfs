@@ -4,9 +4,7 @@ import * as React from 'react';
 
 import LandingPageMain from '@/components/landing_page/LandingPageMain';
 
-import { authOptions } from '@/pages/api/auth/[...nextauth]';
 import { NextPageWithLayout } from '@/pages/page';
-import UnauthedAppLayout from '@/components/layouts/public/UnauthedAppLayout';
 
 const IndexPage: NextPageWithLayout = () => {
 	return <LandingPageMain />;

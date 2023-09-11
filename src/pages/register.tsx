@@ -5,8 +5,6 @@ import RegisterMain from '@/components/register/RegisterMain';
 
 import { NextPageWithLayout } from '@/pages/page';
 
-export { getServerSideProps } from '@/pages/index';
-
 const RegistersPage: NextPageWithLayout = () => {
 	return <RegisterMain />;
 };
