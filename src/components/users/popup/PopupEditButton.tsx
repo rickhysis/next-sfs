@@ -12,7 +12,7 @@ import { useMutation } from '@tanstack/react-query';
 import { useUpdateUser } from '@/hooks/master_data/useUser';
 interface PopupEditButtonProps {
 	userData: UserType;
-	refetch: Function;
+	refetch(): void;
 }
 
 const PopupEditButton: React.FC<PopupEditButtonProps> = ({ userData, refetch }) => {

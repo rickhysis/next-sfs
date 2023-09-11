@@ -3,7 +3,6 @@ module.exports = {
 		browser: true,
 		es2022: true,
 		node: true,
-		'cypress/globals': true,
 		es6: true,
 	},
 	root: true,
@@ -12,24 +11,14 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: [
-		'@typescript-eslint',
-		'simple-import-sort',
-		'unused-imports',
-		'cypress',
-		'unicorn',
-	],
+	plugins: ['@typescript-eslint'],
 	extends: [
-		'plugin:cypress/recommended',
 		'eslint:recommended',
 		'plugin:import/recommended',
 		'plugin:import/typescript',
 		'plugin:@typescript-eslint/recommended',
 		'next',
 		'next/core-web-vitals',
-		'prettier',
-		'plugin:sonarjs/recommended',
-		'plugin:unicorn/recommended',
 	],
 	rules: {
 		'@typescript-eslint/ban-types': [
@@ -55,76 +44,7 @@ module.exports = {
 				children: 'never',
 			},
 		],
-		'@typescript-eslint/no-empty-function': 'off',
-		'@typescript-eslint/prefer-optional-chain': 'warn',
-		//#region  //*=========== Unused Import ===========
-		'unused-imports/no-unused-imports': 'warn',
-		'unused-imports/no-unused-vars': 'off',
-		'@typescript-eslint/no-unused-vars': [
-			'warn',
-			{
-				vars: 'all',
-				varsIgnorePattern: '^_',
-				args: 'after-used',
-				argsIgnorePattern: '^_',
-			},
-		],
-		//#endregion  //*======== Unused Import ===========
-		//#region  //*=========== Import Sort ===========
-		'simple-import-sort/exports': 'warn',
-		'simple-import-sort/imports': [
-			'warn',
-			{
-				groups: [
-					// ext library & side effect imports
-					['^@?\\w', '^\\u0000'], // {s}css files
-					['^.+\\.s?css$'], // Lib and hooks
-					['^@/lib', '^@/hooks'], // static data
-					['^@/data'], // components
-					['^@/components', '^@/container'], // zustand store
-					['^@/store'], // Other imports
-					['^@/'], // relative paths up until 3 level
-					[
-						'^\\./?$',
-						'^\\.(?!/?$)',
-						'^\\.\\./?$',
-						'^\\.\\.(?!/?$)',
-						'^\\.\\./\\.\\./?$',
-						'^\\.\\./\\.\\.(?!/?$)',
-						'^\\.\\./\\.\\./\\.\\./?$',
-						'^\\.\\./\\.\\./\\.\\.(?!/?$)',
-					],
-					['^@/types'], // other that didnt fit in
-					['^'],
-				],
-			},
-		], //#endregion  //*======== Import Sort ===========
-
-		//#region  //*=========== Unicorn ===========
-		'unicorn/prevent-abbreviations': [
-			'error',
-			{
-				replacements: {
-					props: false,
-					args: false,
-				},
-				allowList: {
-					ProcessEnv: true,
-				},
-			},
-		],
-		'unicorn/filename-case': 0,
-		'unicorn/no-null': 0,
-		'unicorn/no-array-reduce': 0,
-		'unicorn/prefer-module': 0,
-		//#endregion  //*======== Unicorn ===========
-		// Cypress
-		'cypress/no-assigning-return-values': 'error',
-		'cypress/no-unnecessary-waiting': 'error',
-		'cypress/assertion-before-screenshot': 'warn',
-		'cypress/no-force': 'warn',
-		'cypress/no-async-tests': 'error',
-		'cypress/no-pause': 'error',
+		'@typescript-eslint/no-empty-function': 'off'
 	},
 	globals: {
 		React: true,
@@ -135,12 +55,6 @@ module.exports = {
 			files: ['*.js'],
 			rules: {
 				'@typescript-eslint/no-var-requires': 'off',
-			},
-		},
-		{
-			files: ['cypress/**/*.{js,ts}', '*.{jsx,tsx}'],
-			rules: {
-				'sonarjs/no-duplicate-string': 'off',
 			},
 		},
 	],

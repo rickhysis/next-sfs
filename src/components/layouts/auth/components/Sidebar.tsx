@@ -1,4 +1,4 @@
-import { Box, Img, Stack, VStack } from '@chakra-ui/react';
+import { Box, Stack, VStack } from '@chakra-ui/react';
 import * as React from 'react';
 
 const Menu = dynamic(

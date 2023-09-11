@@ -1,5 +1,3 @@
-import { GetServerSidePropsContext } from 'next';
-import { getServerSession } from 'next-auth/next';
 import * as React from 'react';
 
 import LandingPageMain from '@/components/landing_page/LandingPageMain';

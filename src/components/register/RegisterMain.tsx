@@ -15,11 +15,9 @@ export interface RegisterMainProps { }
 const RegisterMain: React.FC<RegisterMainProps> = () => {
 	const router = useRouter()
 	const toast = useToast()
-	// eslint-disable-next-line unicorn/consistent-function-scoping
 	const handleLoginSubmit = (values: RegisterSchemaType) => {
-		// eslint-disable-next-line no-console
-		console.log(values);
 		createUserWithEmailAndPassword(auth, values.email, values.password).then((userCredential) => {
+			/* eslint-disable no-console */
 			console.log(userCredential)
 			toast({
 				title: 'Successfull registration user',
@@ -27,7 +25,7 @@ const RegisterMain: React.FC<RegisterMainProps> = () => {
 				isClosable: true,
 			})
 			router.push('/login');
-		}).catch((error: any) => {
+		}).catch((error) => {
 			// Handle Errors here.
 			const errorCode = error.code;
 			const errorMessage = error.message;
@@ -50,7 +48,6 @@ const RegisterMain: React.FC<RegisterMainProps> = () => {
 					isClosable: true,
 				})
 			}
-			console.log(error.code);
 		});
 	};
 

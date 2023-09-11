@@ -33,7 +33,7 @@ export type ErrorProps = {
 } & NextErrorProps;
 
 const CustomErrorComponent = (props: ErrorPageProps): JSX.Element => {
-	const { statusCode, isReadyToRender, err, children = null } = props;
+	const { statusCode, err, children = null } = props;
 
 	// eslint-disable-next-line no-console
 	console.warn(
@@ -55,7 +55,7 @@ const CustomErrorComponent = (props: ErrorPageProps): JSX.Element => {
 CustomErrorComponent.getInitialProps = async (
 	props: NextPageContext
 ): Promise<ErrorProps> => {
-	const { res, err, asPath } = props;
+	const { res, err } = props;
 
 	const errorInitialProps: ErrorProps =
 		(await NextErrorComponent.getInitialProps({
@@ -77,15 +77,6 @@ CustomErrorComponent.getInitialProps = async (
 	}
 
 	if (err) {
-		//get all variables from process.env and put them to env object
-		const environmentVariables = Object.keys(process.env).reduce(
-			(environment, key) => {
-				environment[key] = process.env[key] ?? '';
-				return environment;
-			},
-			{} as { [key: string]: string }
-		);
-
 		return errorInitialProps;
 	}
 

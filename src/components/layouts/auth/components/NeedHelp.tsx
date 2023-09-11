@@ -4,7 +4,6 @@ import {
 	Center,
 	Icon,
 	IconButton,
-	Img,
 	Text,
 } from '@chakra-ui/react';
 import { useAtomValue } from 'jotai';

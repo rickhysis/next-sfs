@@ -24,7 +24,7 @@ import { UserType } from '@/types/user';
 export interface DeleteConfirmationProps {
 	layoutDisclosure: UseDisclosureReturn;
 	userData: UserType;
-	refetch: Function;
+	refetch(): void;
 }
 
 const DeleteConfirmation: React.FC<DeleteConfirmationProps> = ({
@@ -110,6 +110,7 @@ const DeleteConfirmation: React.FC<DeleteConfirmationProps> = ({
 							_hover={{ bg: 'tranparent' }}
 							leftIcon={<Icon as={BsFillTrash3Fill} boxSize={4} />}
 							onClick={handleDelete}
+							isLoading={isLoading}
 						>
 							Sure, Delete
 						</Button>

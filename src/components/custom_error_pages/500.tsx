@@ -9,10 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { signOut } from 'next-auth/react';
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function clearSiteDataAndReload() {
-	// Clear session cookies
-	let isError = false;
 
 	// Clear localStorage
 	if (typeof Storage !== 'undefined' && localStorage) {
@@ -20,11 +17,9 @@ function clearSiteDataAndReload() {
 			localStorage.clear();
 		} catch (error) {
 			console.error('Error clearing localStorage:', error);
-			isError = true;
 		}
 	} else {
 		console.error('localStorage is not supported in this browser.');
-		isError = true;
 	}
 
 	// Clear sessionStorage
@@ -33,11 +28,9 @@ function clearSiteDataAndReload() {
 			sessionStorage.clear();
 		} catch (error) {
 			console.error('Error clearing sessionStorage:', error);
-			isError = true;
 		}
 	} else {
 		console.error('sessionStorage is not supported in this browser.');
-		isError = true;
 	}
 
 	// Force logout the site

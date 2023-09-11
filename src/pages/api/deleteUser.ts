@@ -4,7 +4,7 @@ import { auth } from 'firebase-admin';
 
 customInitApp()
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const DeleteUser = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const { uid } = req.query;
 		await auth().deleteUser(uid as string);
@@ -15,3 +15,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		res.status(500).json({ success: false, error: error });
 	}
 };
+
+export default DeleteUser

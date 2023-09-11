@@ -4,7 +4,7 @@ import { auth } from 'firebase-admin';
 
 customInitApp()
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const UpdateUser = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const {
 			uid,
@@ -26,3 +26,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		res.status(500).json({ success: false, error: error });
 	}
 };
+
+export default UpdateUser

@@ -4,7 +4,7 @@ import { auth } from 'firebase-admin';
 
 customInitApp()
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const SearchUser = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const search : string = req.query.search as string;
 		const result = await auth().getUsers([{ email: search }]);
@@ -21,3 +21,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		res.status(500).json({ error: 'Email not found' });
 	}
 };
+
+export default SearchUser

@@ -1,12 +1,4 @@
-import {
-	Box,
-	Button,
-	Flex,
-	FormLabel,
-	Link,
-	Spacer,
-	Switch,
-} from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 import { createTsForm } from '@ts-react/form';
 import { ReactNode } from 'react';
 import { z } from 'zod';

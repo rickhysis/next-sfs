@@ -5,19 +5,16 @@ import LoginForm from '@/components/login/LoginForm';
 import { LoginSchema, loginSchema } from '@/components/login/LoginSchema';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/pages/firebase';
-import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
 
 export interface LoginMainProps { }
 
 const LoginMain: React.FC<LoginMainProps> = () => {
-	const router = useRouter();
 	const toast = useToast();
-	// eslint-disable-next-line unicorn/consistent-function-scoping
+
 	const handleLoginSubmit = (values: LoginSchema) => {
-		// eslint-disable-next-line no-console
-		console.log(values);
 		signInWithEmailAndPassword(auth, values.email, values.password).then((userCredential) => {
+			/* eslint-disable no-console */
 			console.log(userCredential)
 			toast({
 				title: 'You have successfully logged in',
@@ -25,8 +22,7 @@ const LoginMain: React.FC<LoginMainProps> = () => {
 				isClosable: true,
 			})
 			signIn('credentials', {email: values.email, password: values.password, redirect: true, callbackUrl: '/users'})
-			//router.push('/users');
-		}).catch((error: any) => {
+		}).catch((error) => {
 			// Handle Errors here.
 			const errorCode = error.code;
 			const errorMessage = error.message;
@@ -49,7 +45,6 @@ const LoginMain: React.FC<LoginMainProps> = () => {
 					isClosable: true,
 				})
 			}
-			console.log(error.code);
 		});
 	};
 

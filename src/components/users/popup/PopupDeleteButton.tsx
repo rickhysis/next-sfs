@@ -7,7 +7,7 @@ import { UserType } from '@/types/user';
 
 interface PopupDeleteButtonProps {
 	userData: UserType;
-	refetch: Function;
+	refetch(): void;
 }
 
 const PopupDeleteButton: React.FC<PopupDeleteButtonProps> = ({

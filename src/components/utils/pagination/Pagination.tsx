@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button, HStack, ChakraProvider, Box } from '@chakra-ui/react';
+import React from 'react';
+import { Button, HStack } from '@chakra-ui/react';
 
 interface PaginationProps {
   currentPage: number;

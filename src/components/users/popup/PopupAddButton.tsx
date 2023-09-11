@@ -11,7 +11,7 @@ import { useMutation } from '@tanstack/react-query';
 import { useCreateUser } from '@/hooks/master_data/useUser';
 
 interface PopupAddButtonProps {
-	refetch: Function;
+	refetch(): void;
 }
 
 const PopupAddButton: React.FC<PopupAddButtonProps> = ({

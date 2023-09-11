@@ -16,7 +16,7 @@ import Pagination from '../utils/pagination/Pagination';
 
 export interface UserTableProps {
 	user: UserType[];
-	refetch: Function;
+	refetch(): void;
 	handlePageChange(pageNumber: number, pageToken: string | null | undefined) : void;
 	pageToken: string | null | undefined;
 	currentPage: number;

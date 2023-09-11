@@ -30,7 +30,7 @@ const DetailMenu = ({
 	isOpenSideBar,
 	deep,
 	showSubMenu,
-}: // eslint-disable-next-line sonarjs/cognitive-complexity
+}:
 DetailMenuProps) => {
 	return (
 		<HStack
@@ -65,8 +65,7 @@ DetailMenuProps) => {
 						color={
 							isActive && hasIcon
 								? 'black'
-								: // eslint-disable-next-line unicorn/no-nested-ternary
-								isActive && !hasIcon
+								: isActive && !hasIcon
 								? 'green.600'
 								: 'gray.600'
 						}

@@ -4,7 +4,7 @@ import { auth } from 'firebase-admin';
 
 customInitApp()
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const CreateUser = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const {
 			email,
@@ -26,3 +26,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		res.status(500).json({ success: false, error: error });
 	}
 };
+
+export default CreateUser

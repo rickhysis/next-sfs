@@ -9,7 +9,7 @@ interface ParamUsersType {
 
 customInitApp()
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const GetUsers = async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const { nextPageToken, limit }: ParamUsersType = req.query
 		const limitValue = parseInt(limit as string, 10);
@@ -34,3 +34,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		res.status(500).json({ error: 'Error listing users' });
 	}
 };
+
+export default GetUsers

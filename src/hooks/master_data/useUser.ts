@@ -13,7 +13,7 @@ const fetchUsers = async (props: UserParamsType) => {
 	if (props.search) {
 		url = '/api/searchUser';
 	}
-
+	/* eslint-disable @typescript-eslint/no-explicit-any */
 	const queryString = new URLSearchParams(props as any).toString();
 	const apiUrl = `${url}?${queryString}`;
 	const response = await fetch(apiUrl);

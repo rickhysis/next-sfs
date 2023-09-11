@@ -13,6 +13,7 @@ export const authOptions = {
     CredentialsProvider({
       name: 'Credentials',
       credentials: {},
+			/* eslint-disable @typescript-eslint/no-explicit-any */
       async authorize(credentials): Promise<any> {
         return await signInWithEmailAndPassword(auth, (credentials as any).email || '', (credentials as any).password || '')
           .then(userCredential => {
@@ -21,10 +22,10 @@ export const authOptions = {
             }
             return null;
           })
+					/* eslint-disable no-console */
           .catch(error => (console.log(error)))
   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+		/* eslint-disable no-console */
     console.log(error);
   });
       }

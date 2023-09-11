@@ -1,4 +1,4 @@
-import { Box, Flex, Img } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Head from 'next/head';
 import * as React from 'react';
 import { useSession } from 'next-auth/react';

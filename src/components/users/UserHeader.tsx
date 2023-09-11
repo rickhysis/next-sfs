@@ -1,5 +1,4 @@
 import {
-	Button,
 	Flex,
 	HStack,
 	Icon,
@@ -19,7 +18,7 @@ import { fetchUsers } from '@/hooks/master_data/useUser';
 
 
 interface UserHeaderProps {
-	refetch: Function;
+	refetch(): void;
 	setSearchValue: React.Dispatch<React.SetStateAction<string>>;
 }
 

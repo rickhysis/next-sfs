@@ -1,4 +1,4 @@
-import { Box, Button, Code, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Code, Image, Text, VStack } from '@chakra-ui/react';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -13,21 +13,21 @@ const LandingPageBody = () => {
 				Getting Started
 			</Text>
 			<Box width="50%" p={4}>
-				<p>This source code available at <Link href={'https://github.com/rickhysis/next-sfs'}><Code colorScheme='green' children='https://github.com/rickhysis/next-sfs' /></Link> </p>
-				<p>Clone this aplication in <Code colorScheme='gray' children='git clone add origin git@github.com:rickhysis/next-sfs.git' /></p>
+				<p>This source code available at <Link href="https://github.com/rickhysis/next-sfs"><Code colorScheme='green'>https://github.com/rickhysis/next-sfs</Code></Link> </p>
+				<p>Clone this aplication in <Code colorScheme='gray'>git clone add origin git@github.com:rickhysis/next-sfs.git</Code></p>
 				<p>First, run the development server:</p>
-				<Code colorScheme='gray' children='npm run dev' />
+				<Code colorScheme='gray'>npm run dev</Code>
 				<p>or</p>
-				<Code colorScheme='gray' children='yarn dev' />
+				<Code colorScheme='gray'>yarn dev</Code>
 				<p>or</p>
-				<Code colorScheme='gray' children='pnpm dev' />
+				<Code colorScheme='gray'>pnpm dev</Code>
 			</Box>
 
 			<Text fontSize={{ base: '1.5rem', md: '40px' }} fontWeight="bold">
 				How To use
 			</Text>
 			<Text color="gray.500" pt={[2, 6]} fontSize={14}>
-				First register your account at <Link href={'/register'}><Code colorScheme='green' children='/register' /></Link> and input all data thats required
+				First register your account at <Link href="/register"><Code colorScheme='green'>/register</Code></Link> and input all data thats required
 			</Text>
 			<Image
 				src="/images/register.png"
@@ -37,7 +37,7 @@ const LandingPageBody = () => {
 				objectFit="cover"
 			/>
 			<Text color="gray.500" pt={[2, 6]} fontSize={14}>
-				After that, you can enter login to appplication at <Link href={'/login'}><Code colorScheme='green' children='/login' /></Link> with data was your input
+				After that, you can enter login to appplication at <Link href="/login"><Code colorScheme='green' >/login</Code></Link> with data was your input
 			</Text>
 			<Image
 				src="/images/login.png"

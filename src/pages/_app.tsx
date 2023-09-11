@@ -12,7 +12,7 @@ import type { AppContext, AppProps } from 'next/app';
 import App from 'next/app';
 import Head from 'next/head';
 import { Session } from 'next-auth';
-import { getSession, SessionProvider } from 'next-auth/react';
+import { SessionProvider } from 'next-auth/react';
 import React from 'react';
 
 import { useClearQueriesOnLogin } from '@/hooks/utils/useClearQueriesOnLogin';
