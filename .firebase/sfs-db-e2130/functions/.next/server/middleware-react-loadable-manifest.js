@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"../components/layouts/auth/components/Sidebar.tsx -> @/components/layouts/auth/components/Menu":{"id":1444,"files":["static/chunks/664-0305aede6b1ca2d4.js","static/chunks/444.9460cb12d2c5855f.js"]}}';

@@ -16,9 +16,7 @@ const UnauthedAppLayout: React.FC<AppLayoutProps> = ({
 	pageTitle = ' SFS DEMO',
 }) => {
 	const router = useRouter()
-	const { status } = useSession({
-		required: true,
-	});
+	const { status } = useSession();
 
 	if(status === "authenticated") {
 		router.push('/users');
