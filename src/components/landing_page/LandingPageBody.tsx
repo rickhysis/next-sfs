@@ -12,7 +12,7 @@ const LandingPageBody = () => {
 			<Text fontSize={{ base: '1.5rem', md: '40px' }} textAlign="left" fontWeight="bold">
 				Getting Started
 			</Text>
-			<Box width="50%" p={4}>
+			<Box maxWidth="550px" p={4}>
 				<p>This source code available at <Link href="https://github.com/rickhysis/next-sfs"><Code colorScheme='green'>https://github.com/rickhysis/next-sfs</Code></Link> </p>
 				<p>Clone this aplication in <Code colorScheme='gray'>git clone add origin git@github.com:rickhysis/next-sfs.git</Code></p>
 				<p>First, run the development server:</p>

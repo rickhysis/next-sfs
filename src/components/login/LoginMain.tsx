@@ -58,9 +58,9 @@ const LoginMain: React.FC<LoginMainProps> = () => {
 				alignItems="center"
 				flexDirection="column"
 				mt="6"
-				p="4"
+				p="1"
 			>
-				<Box w="md" p={{ base: 8, md: 10 }}>
+				<Box width={{ base: '90%', md: '30%', sm: '90%' }}>
 					<Text fontSize={28} align="center" color="green.600" fontWeight={900}>Sign In</Text>
 					<Text fontSize={14} align="center" fontWeight={700}>Input your email and password to sign in</Text>
 					<LoginForm

@@ -48,16 +48,15 @@ const Custom500 = () => {
 		>
 			<Center mb="6">
 				<Heading as="h1" fontSize="6xl" fontWeight="bold" color="white">
-					Kesalahan Server
+					Internal Server Error
 				</Heading>
 			</Center>
 			<Text fontSize="2xl" fontWeight="semibold" color="white" mb="6">
-				Maaf, terjadi kesalahan pada server.
+				Sorry, an occured error in the server
 			</Text>
 			<Box textAlign="center" mb="6">
 				<Text fontSize="lg" color="white">
-					Silakan klik tombol berikut untuk memuat ulang aplikasi, jika masih
-					terjadi kesalahan silakan hubungi admin.
+					Please following click button to reload page, if any problem you can contact administrator.
 				</Text>
 			</Box>
 			<Button
@@ -65,7 +64,7 @@ const Custom500 = () => {
 				variant="solid"
 				onClick={clearSiteDataAndReload}
 			>
-				Muat Ulang
+				Reload
 			</Button>
 		</Flex>
 	);

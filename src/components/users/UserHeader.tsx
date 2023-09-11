@@ -57,16 +57,16 @@ const UserHeader: React.FC<UserHeaderProps> = ({
 
 	return (
 		<Flex
-			flexDir={{ base: 'column', md: 'row' }}
+			flexDir={{ base: 'row', md: 'row', sm: 'column' }}
 			justifyContent="space-between"
 			alignItems={{ base: 'flex-start', md: 'center' }}
 			mb={6}
 		>
-			<HStack gap={6}>
+			<HStack gap={6} >
 				<Text fontSize="lg" fontWeight={700}>
 					User
 				</Text>
-				<InputGroup w={{ base: 'auto', md: '308px' }}>
+				<InputGroup w={{ base: '100%', md: '308px', sm: '100%' }}>
 					<InputLeftElement width="2.5rem">
 						<Icon as={IoSearch} color="gray.600" boxSize={4} />
 					</InputLeftElement>

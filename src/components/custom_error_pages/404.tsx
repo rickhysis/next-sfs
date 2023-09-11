@@ -17,12 +17,11 @@ const Custom404 = () => {
 				</Heading>
 			</Center>
 			<Text fontSize="2xl" fontWeight="semibold" color="white" mb="6">
-				Halaman tidak ditemukan
+				Page not found
 			</Text>
 			<Box textAlign="center" mb="6">
 				<Text fontSize="lg" color="white">
-					Maaf, halaman yang anda cari tidak ditemukan, silakan kembali ke
-					halaman utama.
+					Sorry, page are you looking for not found, please go to main page.
 				</Text>
 			</Box>
 			<ButtonLink
@@ -32,7 +31,7 @@ const Custom404 = () => {
 					variant: 'solid',
 				}}
 			>
-				Kembali
+				Back
 			</ButtonLink>
 		</Flex>
 	);

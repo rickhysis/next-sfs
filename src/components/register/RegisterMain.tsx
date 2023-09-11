@@ -51,8 +51,6 @@ const RegisterMain: React.FC<RegisterMainProps> = () => {
 		});
 	};
 
-
-
 	return (
 		<Box
 			bg="white"
@@ -64,7 +62,7 @@ const RegisterMain: React.FC<RegisterMainProps> = () => {
 			mt="6"
 			p="4"
 		>
-			<Box w="md" p={{ base: 4, md: 10 }}>
+			<Box width={{ base: '90%', md: '30%', sm: '90%' }}>
 				<RegisterForm
 					schema={registerSchema}
 					onSubmit={handleLoginSubmit}
